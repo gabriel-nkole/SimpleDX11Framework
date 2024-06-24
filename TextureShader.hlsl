@@ -42,7 +42,7 @@ float4 TexturePixelShader(Interpolators input) : SV_TARGET{
 
 	float4 texCol = shaderTexture.Sample(SampleType, input.uv);
 	col = texCol;
-	col = input.color * texCol + input.color/1.5f;		//blends fragment color with texture color, will mess up 2D rendering
+	//col = input.color * texCol + input.color/1.5f;		//blends fragment color with texture color, will mess up 2D rendering
 
 	return col;
 }
