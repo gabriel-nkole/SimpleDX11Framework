@@ -34,6 +34,9 @@ https://github.com/gabriel-nkole/SimpleDX11Framework/assets/101514971/fec9a31a-f
 
 https://github.com/gabriel-nkole/SimpleDX11Framework/assets/101514971/0011a20c-dba8-43a2-a0bc-11f69636d643
 
+![VisualStudio_screenshot](https://github.com/gabriel-nkole/SimpleDX11Framework/assets/101514971/7f3424ac-3bb8-4354-8099-5e4634bfd8a4)
+
+
 
 ## References
 - RasterTek DirectX 11 on Windows 10 Tutorials - https://www.rastertek.com/tutdx11win10.html (Window, Direct3D & DirectInput Initialization)
