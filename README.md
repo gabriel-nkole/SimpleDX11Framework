@@ -13,7 +13,7 @@ My test framework for 3D & 2D Rendering using DirectX (Direct3D & DirectInput).
 - Camera Controls
 - Fullscreen
 
-## TODO
+## Todo
 - Multi-Sampling (currently supported but not working when enabled)
 - Lighting (Directional Lights, Point Lights, Spot Lights)
 - Shadow Mapping
