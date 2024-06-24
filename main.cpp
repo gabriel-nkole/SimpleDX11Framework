@@ -278,23 +278,23 @@ int WINAPI wWinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance, 
 		//	break;
 		//}
 		
-		// Color Cube
-		//cubeRotationAngle += 45.0f * Deg2Rad * frameTime;
-		//if (cubeRotationAngle >= 360.0) {
-		//	cubeRotationAngle -= 360.0;
-		//}
-		//M = XMMatrixMultiply(XMMatrixRotationRollPitchYaw(0.0f, cubeRotationAngle, 0.0f), XMMatrixTranslation(0.0f, 1.0001f, 0.0f));
-		//result = DrawTextureObject(d3d->deviceContext, hWnd, &textureShader, &cube, matrixBuffer, M, V, P, &pattern.textureView);
-		//if (!result) {
-		//	break;
-		//}
+		// Cube
+		cubeRotationAngle += 45.0f * Deg2Rad * frameTime;
+		if (cubeRotationAngle >= 360.0){
+			cubeRotationAngle -= 360.0;
+		}
+		M = XMMatrixMultiply(XMMatrixRotationRollPitchYaw(0.0f, cubeRotationAngle, 0.0f), XMMatrixTranslation(0.0f, 1.0001f, 0.0f));
+		result = DrawTextureObject(d3d->deviceContext, hWnd, &textureShader, &cube, matrixBuffer, M, V, P, &pattern.textureView);
+		if (!result) {
+			break;
+		}
 		
 		// Plane
-		//M = XMMatrixScaling(50.0f, 0.0f, 50.0f);
-		//result = DrawFloorObject(d3d->deviceContext, hWnd, &floorShader, &plane, matrixBuffer, M, V, P);
-		//if (!result) {
-		//	break;
-		//}
+		M = XMMatrixScaling(50.0f, 0.0f, 50.0f);
+		result = DrawFloorObject(d3d->deviceContext, hWnd, &floorShader, &plane, matrixBuffer, M, V, P);
+		if (!result) {
+			break;
+		}
 		
 		
 		
@@ -312,27 +312,27 @@ int WINAPI wWinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance, 
 		
 		
 		// 2D OBJECTS
-		DisableDepthBuffer(d3d);
-		EnableAlphaBlending(d3d);
-		
-		
-		// Background Sprite
-		result = DrawObject2D(d3d->deviceContext, hWnd, &textureShader, &quad2D, matrixBuffer, M_identity, V_2D, O, &backgroundSprite.textureView);
-		if (!result) {
-			break;
-		}
-		
-		// Character Sprite
-		updateCharacterSpritePos = UpdateCharacterSprite(frameTime);
-		result = DrawObject2D(d3d->deviceContext, hWnd, &textureShader, &quad2DDynamic, matrixBuffer, M_identity, V_2D, O, &characterSprite[spriteIndex].textureView,
-							  updateCharacterSpritePos, spriteWidth, spriteHeight, spritePosX, spritePosY);
-		if (!result) {
-			break;
-		}
-		
-		
-		DisableAlphaBlending(d3d);
-		EnableDepthBuffer(d3d);
+		//DisableDepthBuffer(d3d);
+		//EnableAlphaBlending(d3d);
+		//
+		//
+		//// Background Sprite
+		//result = DrawObject2D(d3d->deviceContext, hWnd, &textureShader, &quad2D, matrixBuffer, M_identity, V_2D, O, &backgroundSprite.textureView);
+		//if (!result) {
+		//	break;
+		//}
+		//
+		//// Character Sprite
+		//updateCharacterSpritePos = UpdateCharacterSprite(frameTime);
+		//result = DrawObject2D(d3d->deviceContext, hWnd, &textureShader, &quad2DDynamic, matrixBuffer, M_identity, V_2D, O, &characterSprite[spriteIndex].textureView,
+		//					  updateCharacterSpritePos, spriteWidth, spriteHeight, spritePosX, spritePosY);
+		//if (!result) {
+		//	break;
+		//}
+		//
+		//
+		//DisableAlphaBlending(d3d);
+		//EnableDepthBuffer(d3d);
 		
 		
 		EndFrame(d3d);

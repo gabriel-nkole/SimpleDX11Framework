@@ -1,3 +1,4 @@
 ﻿  main.cpp
+D:\GraphicsDev\Projects\Personal Projects\DX11\TinkeringWithWindowsAndDX11\main.cpp(206,7): warning C4101: 'updateCharacterSpritePos': unreferenced local variable
 D:\GraphicsDev\Projects\Personal Projects\DX11\TinkeringWithWindowsAndDX11\main.cpp(446,13): warning C4065: switch statement contains 'default' but no 'case' labels
   TinkeringWithWindowsAndDX11.vcxproj -> D:\GraphicsDev\Projects\Personal Projects\DX11\TinkeringWithWindowsAndDX11\x64\Debug\TinkeringWithWindowsAndDX11.exe
